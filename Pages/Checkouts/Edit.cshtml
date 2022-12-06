@@ -1,0 +1,45 @@
+@page
+@model CIDM_3312_FINAL_PROJECT_YOTAM.B_.Pages.Checkouts.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Checkout</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Checkout.CheckoutID" />
+            <div class="form-group">
+                <label asp-for="Checkout.itemID" class="control-label"></label>
+                <input asp-for="Checkout.itemID" class="form-control" />
+                <span asp-validation-for="Checkout.itemID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Checkout.UserName" class="control-label"></label>
+                <input asp-for="Checkout.UserName" class="form-control" />
+                <span asp-validation-for="Checkout.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Checkout.totoal_price" class="control-label"></label>
+                <input asp-for="Checkout.totoal_price" class="form-control" />
+                <span asp-validation-for="Checkout.totoal_price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

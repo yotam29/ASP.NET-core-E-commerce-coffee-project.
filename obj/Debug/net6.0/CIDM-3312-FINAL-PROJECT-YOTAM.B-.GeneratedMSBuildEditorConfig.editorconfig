@@ -1,0 +1,64 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CIDM_3312_FINAL_PROJECT_YOTAM.B_
+build_property.RootNamespace = CIDM_3312_FINAL_PROJECT_YOTAM.B_
+build_property.ProjectDir = C:\Users\yotha\OneDrive\Desktop\CIDM 3312\CIDM-3312-FINAL-PROJECT-YOTAM.B-\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\yotha\OneDrive\Desktop\CIDM 3312\CIDM-3312-FINAL-PROJECT-YOTAM.B-
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Checkouts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Checkouts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Checkouts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Checkouts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Checkouts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yotha/OneDrive/Desktop/CIDM 3312/CIDM-3312-FINAL-PROJECT-YOTAM.B-/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-cpeygewifk

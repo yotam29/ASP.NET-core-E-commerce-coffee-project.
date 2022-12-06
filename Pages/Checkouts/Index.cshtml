@@ -1,0 +1,48 @@
+@page
+@model CIDM_3312_FINAL_PROJECT_YOTAM.B_.Pages.Checkouts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Checkout</h1>
+
+@* <p>
+    <a asp-page="Create">Create New</a>
+</p> *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Checkout[0].itemID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Checkout[0].UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Checkout[0].totoal_price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Checkout) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.itemID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totoal_price)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CheckoutID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CheckoutID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CheckoutID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

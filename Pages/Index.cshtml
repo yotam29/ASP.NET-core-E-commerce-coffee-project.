@@ -1,0 +1,82 @@
+﻿@page
+@model IndexModel
+<h1> Coffee collecation</h1>
+@* search bar  *@
+<form>
+    <p>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+
+ <table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+    @* the header of the table *@
+      <th scope="col">
+        @{
+            var firstSort ="first_asc";
+            if(Model.CurrentSort =="first_asc")
+            {
+                firstSort ="first_desc";
+            }
+        }
+           <a asp-page="./Index" asp-route-CurrentSort="@firstSort" asp-route-PageNum="@(Model.PageNum )">Name</a></th>
+      <th scope="col">Price </th>
+      <th scope="col">Description</th>
+      <th>Add to cart</th>
+    </tr>
+  </thead>
+  @* foreach loop to display all the required info *@
+  @foreach (var i in Model.items)
+{
+        <tr>
+      <td>@Html.DisplayFor(model=> i.item_name) </td>
+      <td>@Html.DisplayFor(model=> i.item_price)</td>
+      <td>@Html.DisplayFor(model=> i.item_description)</td>
+      <td><form method="post">
+    <div class="form-group">
+        <label asp-for="cart.itemID" class ="control-label"></label>
+        <select asp-for="cart.itemID" asp-items="Model.CartDropDown" class="form-control">
+            <option value="">--Select Item</option>
+        </select>
+    </div>
+    @* <div class="form-group">
+        <label asp-for="Course.Description" class="control-label"></label>
+        <input asp-for="Course.Description" class="form-control"/>
+        <span asp-validation-for="Course.Description" class="text-danger"></span>
+    </div> *@
+       <div class="form-group">
+        <input type="submit" value="Add to cart"  class="btn btn-primary" /> 
+    </div>
+</form></td>
+
+    </tr> 
+    
+}
+
+</table>
+<hr/>
+@{
+    // If we are on page 1, prevDisabled will be set to the "disabled" class
+    // otherwise, it will be empty. So our previous button will be enabled or disabled based on this logic
+    var prevDisabled = "";
+    var nextDisabled ="";
+    if (Model.PageNum <= 1)
+    {
+        prevDisabled = "disabled";
+    }
+    if(Model.PageNum>=3)
+    {
+        nextDisabled="disabled";
+    }
+
+}
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item @prevDisabled"><a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a></li>
+        <li class="page-item @nextDisabled"><a class="page-link"  asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a></li>
+    </ul>
+
+</nav>
