@@ -33,19 +33,18 @@ public class IndexModel : PageModel
 
     [BindProperty]
     public cart cart {get;set;} = default!;
+    [BindProperty]
+    public int selectedItemId {get; set;}
     
-    public SelectList CartDropDown {get;set;}= default!;
-    // public void OnGet()
-    // {
-    //     CartDropDown= new SelectList(_context.items.ToList(),"itemID","item_name");
-        
-    // }
+    public SelectList CartDropDown {get;set;}= default!; // might be deletaed 
+
     public IActionResult OnPost()
     {
-        if(!ModelState.IsValid)
-        {
-            return Page();
-        }
+        _logger.LogWarning($"Item ID Selected: {selectedItemId}");
+        cart.itemID = selectedItemId;
+        cart.item = _context.items.Find(selectedItemId)!;
+        cart.quantity = "1"; // unsure
+        cart.CheckoutID = 1; // You need to figure out how to populate the "Checkout" entity class. 
         // Course =_context.Professors.Include(m => m.Courses).First(m => m.Id == Id)
         _context.carts.Add(cart);
         _context.SaveChanges();
@@ -56,9 +55,15 @@ public class IndexModel : PageModel
     {
         //test
         CartDropDown= new SelectList(_context.items.ToList(),"itemID","item_name");
-
-
         var query =_context.items.Select(i =>i);
+
+        // using System.Linq (Search bar)
+        // Do the search query first and use the same LINQ variable throughout this method
+        if (!string.IsNullOrEmpty(SearchString))
+        {
+            query = query.Where(i => i.item_name.Contains(SearchString));
+        }
+        
         switch(CurrentSort)
         {
             case "first_asc":
@@ -69,18 +74,9 @@ public class IndexModel : PageModel
                 break;
 
 
+
         }
-
-        items = _context.items.ToList();
+        
         items =await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
-
-        // using System.Linq (Search bar)
-            var item = from i in _context.items
-                            select i;
-            if (!string.IsNullOrEmpty(SearchString))
-                {
-                    item = item.Where(i => i.item_name.Contains(SearchString));
-                }
-            
     }
 }
